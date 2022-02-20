@@ -58,6 +58,8 @@
         grid-template-columns: repeat(3, 1fr);
         width: max(700px, 40%);
         grid-auto-columns: auto;
+        border-radius: 5px 5px 5px 5px;
+        overflow: hidden;
         transform:scale(1.2);
       }
 
@@ -70,7 +72,6 @@
         .card{
           grid-template-columns: 1fr;
           max-width: 60%;
-          gap: 2em;
         }
       }
     
@@ -108,26 +109,31 @@
         
       }
 
-      .card .btn:hover{
+      a{
+        text-decoration:none;
+        border: 1px solid transparent;
+      }
+
+      .card a:hover ,.card a:focus{
         cursor: pointer;
         background-color:transparent;
         border: 1px solid hsl(0, 0%, 95%);
         color:hsl(0, 0%, 95%);
       }
-      .card__1 .btn{
+      .card__1 a{
         color: hsl(31, 77%, 52%);
       }
 
-      .card__2 .btn{
+      .card__2 a{
         color: hsl(184, 100%, 22%);
       }
 
-      .card__3 .btn{
+      .card__3 a{
         color: hsl(179, 100%, 13%);
       }
       .card__1 {
         background-color:hsl(31, 77%, 52%);
-        border-radius: 5px 0px 0px 5px;
+        /* border-radius: 5px 0px 0px 5px; */
       }
 
       .card__2{
@@ -141,7 +147,7 @@
 
       .card__3{
         background-color:hsl(179, 100%, 13%);
-        border-radius: 0px 5px 5px 0px;
+        /* border-radius: 0px 5px 5px 0px; */
       }
       .card__3 p{
         width:110%;
@@ -154,7 +160,7 @@
       <div class="card">
         <div class="card__1">
           <div class="image">
-            <img src="./images/icon-sedans.svg" alt="Sedans Icon image" />
+            <img src="./images/icon-sedans.svg" alt="Sedans Icon image" aria-hidden = "true" />
           </div>
           <h1>Sedans</h1>
           <p class="card__paragraph">
@@ -162,11 +168,11 @@
             Ideal for cruising in the city or on your next road trip.
           </p>
 
-          <div class="btn">Learn More</div>
+          <a href="#" class="btn">Learn More</a>
         </div>
         <div class="card__2">
           <div class="image">
-            <img src="./images/icon-suvs.svg" alt="Suys icon image" />
+            <img src="./images/icon-suvs.svg" alt="Suys icon image" aria-hidden = "true"></img>
           </div>
           <h1>SUVs</h1>
 
@@ -174,18 +180,18 @@
             Take an SUV for its spacious interior, power, and versatility.
             Perfect for your next family vacation and off-road adventures.
           </p>
-          <div class="btn">Learn More</div>
+          <a href="#" class="btn">Learn More</a>
         </div>
         <div class="card__3">
           <div class="image">
-            <img src="./images/icon-luxury.svg" alt="Luxury icon image" />
+            <img src="./images/icon-luxury.svg" alt="Luxury icon image" aria-hidden = "true" />
           </div>
           <h1>Luxury</h1>
           <p class="card__paragraph">
             Cruise in the best car brands without the bloated prices. Enjoy the
             enhanced comfort of a luxury rental and arrive in style.
           </p>
-          <div class="btn">Learn More</div>
+          <a href="#" class="btn">Learn More</a>
         </div>
       </div>
     </main>
